@@ -37,3 +37,27 @@ function iniciarJuego() {
         tecladoContainer.appendChild(boton);
     });
 }
+
+function verificarLetra(letra, boton) {
+    boton.disabled = true; 
+    let acierto = false;
+
+    palabraOculta.split("").forEach((caracter, index) => {
+        if (caracter === letra) {
+            acierto = true;
+            document.querySelector(`[data-index="${index}"]`).textContent = letra;
+        }
+    });
+
+    if (!acierto) {
+        errores++;
+        dibujarAhorcado(errores);
+        if (errores === maxErrores) {
+            alert("Ahorcado perdido. La palabra era: " + palabraOculta);
+            reiniciarJuego();
+        }
+    } else if (Array.from(contenedorPalabra.children).every(span => span.textContent !== "_")) {
+        alert("¡Ganaste! La palabra era: " + palabraOculta);
+        reiniciarJuego();
+    }
+}
