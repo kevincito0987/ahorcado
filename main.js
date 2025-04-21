@@ -125,3 +125,11 @@ function dibujarAhorcado(errores) {
             break;
     }
 }
+
+function reiniciarJuego() {
+    iniciarJuego();
+}
+
+botonReiniciar.addEventListener("click", reiniciarJuego);
+
+iniciarJuego();
