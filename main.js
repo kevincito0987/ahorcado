@@ -4,3 +4,10 @@ const palabras = ["javascript", "frontend", "developer", "programacion", "juego"
 let palabraOculta = "";
 let errores = 0;
 const maxErrores = 11;
+
+
+const canvas = document.getElementById("ahorcado-canvas");
+const ctx = canvas.getContext("2d");
+const contenedorPalabra = document.getElementById("word-container");
+const tecladoContainer = document.getElementById("teclado-container");
+const botonReiniciar = document.getElementById("reiniciar-btn");
