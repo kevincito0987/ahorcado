@@ -72,3 +72,21 @@ button:disabled {
     cursor: pointer;
     font-size: 16px;
 }
+
+#reiniciar-btn:hover {
+    background-color: #0056b3;
+}
+
+#teclado-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las letras se ajusten en varias líneas */
+    justify-content: center; /* Centra el teclado horizontalmente */
+    align-items: center; /* Centra el teclado verticalmente */
+    background-color: gold;
+    padding: 30px;
+    gap: 5px; /* Espaciado uniforme entre botones */
+    max-width: 80%; /* Limita el ancho máximo del teclado */
+    margin: 0 auto; /* Centra el contenedor del teclado dentro de la página */
+    border-radius: 10px; /* Mejora el diseño con bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Da un efecto de sombra al contenedor */
+}
