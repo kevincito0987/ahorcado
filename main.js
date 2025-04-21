@@ -61,3 +61,67 @@ function verificarLetra(letra, boton) {
         reiniciarJuego();
     }
 }
+
+function dibujarAhorcado(errores) {
+    switch (errores) {
+        case 1: // Base
+            ctx.fillRect(50, 250, 200, 10);
+            break;
+        case 2: // Poste
+            ctx.fillRect(120, 50, 10, 200);
+            break;
+        case 3: // Brazo horizontal
+            ctx.fillRect(120, 50, 100, 10);
+            break;
+        case 4: // Cuerda
+            ctx.fillRect(220, 50, 2, 50);
+            break;
+        case 5: // Cabeza
+            ctx.beginPath();
+            ctx.arc(220, 110, 20, 0, Math.PI * 2);
+            ctx.stroke();
+            break;
+        case 6: // Cuerpo
+            ctx.fillRect(220, 130, 2, 50);
+            break;
+        case 7: // Brazo izquierdo
+            ctx.beginPath();
+            ctx.moveTo(220, 140);
+            ctx.lineTo(200, 170);
+            ctx.stroke();
+            break;
+        case 8: // Brazo derecho
+            ctx.beginPath();
+            ctx.moveTo(220, 140);
+            ctx.lineTo(240, 170);
+            ctx.stroke();
+            break;
+        case 9: // Pierna izquierda
+            ctx.beginPath();
+            ctx.moveTo(220, 180);
+            ctx.lineTo(200, 210);
+            ctx.stroke();
+            break;
+        case 10: // Pierna derecha
+            ctx.beginPath();
+            ctx.moveTo(220, 180);
+            ctx.lineTo(240, 210);
+            ctx.stroke();
+            break;
+        case 11: // Detalles de la cara (ojos y boca)
+            // Ojo izquierdo
+            ctx.beginPath();
+            ctx.arc(215, 105, 2, 0, Math.PI * 2);
+            ctx.fill();
+            // Ojo derecho
+            ctx.beginPath();
+            ctx.arc(225, 105, 2, 0, Math.PI * 2);
+            ctx.fill();
+            // Boca (línea triste)
+            ctx.beginPath();
+            ctx.moveTo(215, 115);
+            ctx.lineTo(225, 115);
+            ctx.stroke();
+            break;
+    }
+}
