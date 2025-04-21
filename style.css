@@ -90,3 +90,49 @@ button:disabled {
     border-radius: 10px; /* Mejora el diseño con bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Da un efecto de sombra al contenedor */
 }
+
+@media (max-width: 768px) {
+    canvas {
+        max-width: 100%; /* Ajusta el canvas al ancho del dispositivo */
+    }
+
+    #word-container span {
+        font-size: 16px; /* Reducir tamaño de texto en pantallas pequeñas */
+        margin: 0 3px;
+    }
+
+    button {
+        font-size: 14px; /* Botones más pequeños en móviles */
+        padding: 8px 12px;
+    }
+
+    #reiniciar-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #teclado-container {
+        padding: 15px; /* Reduce el espacio interno */
+    }
+}
+
+/* Para pantallas medianas (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    canvas {
+        max-width: 80%; /* Ajusta canvas sin ocupar todo el ancho */
+    }
+
+    #word-container span {
+        font-size: 18px; /* Tamaño de texto intermedio */
+    }
+
+    button {
+        font-size: 15px;
+        padding: 9px 14px;
+    }
+
+    #reiniciar-btn {
+        font-size: 15px;
+        padding: 9px 18px;
+    }
+}
